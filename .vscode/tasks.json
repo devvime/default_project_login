@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Sass Compile",
+            "type": "shell",
+            "command": "sass --watch --trace sass/main.scss:public_html/css/main.css",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Terminate Build",
+            "type": "shell",
+            "command": "postcss --no-map -u autoprefixer -d public_html/css/build/ css/*.css",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }   
+    ]
+}

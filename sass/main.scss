@@ -1,0 +1,193 @@
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #ebebeb;
+}
+
+.load {
+    display: none;
+    img {
+        width: 100%;
+    }
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: linear-gradient(#fdbb49, #1264d3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper-login {
+        width: 100%;
+        max-width: 1140px;
+        height: auto;
+        min-height: 572px;
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+        background-color: white;
+        .col-image {
+            background: linear-gradient(#428DEC, #1264d3);
+            padding: 2em;
+            @media (max-width: 991px) {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .col-login {
+            overflow: hidden;
+            .box-login,
+            .box-register,
+            .box-forget-pass {
+                padding: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                .content {
+                    width: 100%;
+                    h1 {
+                        text-align: center;
+                        color: #1264d3;
+                        line-height: 2.5rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        text-align: center;
+                        color: #1264d3;
+                    }
+                    form {
+                        margin-top: 60px;
+                        text-align: center;
+                        input {
+                            width: 100%;
+                            height: 50px;
+                            border-radius: 40px;
+                            border: 0;
+                            background-image: linear-gradient(to right, #ebebeb, #ccc);
+                            padding: 5px 25px;
+                            margin-bottom: 30px;
+                            outline: none;
+                            transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            &:hover {
+                                transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                transform: translateX(-5px);
+                            }
+                            &:focus {
+                                border: 2px solid #428DEC;
+                            }
+                        }
+                        button {
+                            width: 80%;
+                            margin: auto;
+                            height: 50px;
+                            border-radius: 40px;
+                            border: 0;
+                            outline: none;
+                            text-align: center;
+                            color: white;
+                            text-transform: uppercase;
+                            font-size: 1.3rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-image: linear-gradient(to right, #428DEC, #1264d3);
+                            transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            margin-bottom: 20px;
+                            &:hover {
+                                transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                width: 100%;
+                            }
+                            &:active {
+                                transform: scale(1.1);
+                                transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            }
+                        }
+                        .forget-password {
+                            cursor: pointer;
+                            transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            &:hover {
+                                transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                transform: translateX(-5px);
+                            }
+                        }
+                    }
+                }
+            }
+            .box-register,
+            .box-forget-pass {
+                display: none;
+                .back-login {
+                    width: 100%;
+                    max-width: 60px;
+                    cursor: pointer;
+                    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    &:hover {
+                        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#header {
+    height: 65px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aside {
+    width: 260px;
+    height: 100vh;
+    background-color: #2B2F3A;
+    position: fixed;
+    left: -200px;
+    top: 0;
+    transition: all .5s ease-in-out;
+    .aside-top {
+        height: 65px;
+        background-color: #1E2129;
+        padding: 10px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        img {
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        padding: 10px 18px;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                color: #7F879B;
+                list-style: none;
+                cursor: pointer;
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover {
+                    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
