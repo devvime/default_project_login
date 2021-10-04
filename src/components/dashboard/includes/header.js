@@ -1,10 +1,7 @@
-const header = (data) => {
-    return (
-        /*html*/
-        `
-        <h4>${data}</h4>
-        `
-    )
-}
+const e = React.createElement;
 
-export default header
+export default class header extends React.Component {
+    render() {
+        return e('h4',null, this.props.name)
+    }
+}
